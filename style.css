@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------- header ---------------*/
+
+
+
+.hero {
+    background-image: url(slike/chatgpt.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 70px;
+    padding-top: 70px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero h1,
+.hero h2 {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero h1 {
+    font-size: clamp(4rem, 15vw, 18rem);
+    margin-bottom: 10px;
+}
+
+
+.hero h2 {
+    font-size: clamp(1.8rem, 4vw, 4rem);
+    
+}
+
+.hero-logo
+{
+    width: 450px;          /* prilagodi po želji */
+    object-fit: cover;
+    border-radius: 50%;    /* okrugla slika (CV stil) */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: auto;
+    
+}
+
+
+
+
+
+
+
+
+
+/*--------------- navigacija ---------------*/
+
+
+/* NAVIGACIJA – DESKTOP (gornji desni kut) */
+.navbar {
+    position: absolute;
+    top: 10px;           /* udaljenost od vrha */
+    right: 40px;         /* udaljenost od desnog ruba */
+    background: transparent;  /* providno */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;            /* razmak između linkova */
+}
+
+.navbar a {
+    color: white;          /* bijela slova */
+    text-decoration: none; /* ukloni liniju ispod */
+    font-weight: bold;
+    font-size: 1.0rem;
+    padding: 6px 12px;
+    background: transparent; /* providno */
+    transition: all 0.3s ease;
+}
+
+
+
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------- section ---------------*/
+
+
+
+section {
+    width: 100%;
+    padding: 70px 40px;
+    border-radius: 15px;
+    max-width: 1300px;      /* širina sekcije */
+    margin: 100px auto;      /* centriranje */
+    padding: 60px 50px;
+    position: relative; 
+    border-radius: 0;       /* oštri uglovi */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------- o meni ---------------*/
+
+
+
+.o-meni {
+    background: linear-gradient(
+        to bottom,
+         rgba(51, 61, 119, 0.65),
+       rgba(51, 61, 119, 0.384)
+    );
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 20px;
+}
+
+.o-meni h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.o-meni .ja p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+/* GRID KONTEJNER */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* ZAJEDNIČKI STIL ZA CARDOVE */
+.card {
+    background: linear-gradient(to bottom, rgba(51, 61, 119, 0.782), rgba(51, 61, 119, 0.596));
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Naslovi u karticama */
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.card h4 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Tekst unutar kartica */
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Vještine veća kartica */
+.large-card {
+    grid-row: span 2;
+}
+
+/* Za responsive - na manjim ekranima */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/*-------------- projekti ---------------*/
+
+
+
+.projekti {
+    background: linear-gradient(
+        to bottom,
+         rgba(51, 61, 119, 0.65),
+       rgba(51, 61, 119, 0.384)
+    );
+    text-align: left;
+}
+
+.projekti h2 
+{
+    text-align: center;
+}
+
+.projekti p
+{
+text-align: center;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------- kontakt ---------------*/
+
+
+
+.kontakt {
+    background: linear-gradient(
+        to bottom,
+        rgba(51, 61, 119, 0.65),
+       rgba(51, 61, 119, 0.384)
+    );
+   
+}
+
+
+
+.kontakt input {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    
+}
+
+
+.kontakt textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    resize: none;
+    overflow: hidden;
+    font-family: sans-serif;
+    min-height: 42px;
+}
+
+
+
+.kontakt button
+{
+    width: 90%;
+    max-width: 70px;
+    padding: 7px;
+    margin-top: 5px;
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: rgb(91, 91, 91);
+
+    
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus {
+    box-shadow: 0 0 15px rgba(8, 164, 255, 0.8);
+}
+
+.contact
+{
+    right: 10px;
+}
+
+
+/*---------------footer---------------*/
+
+.footer {
+  background: #000000;
+  margin-top: 50px;
+  padding-top: 50px;
+  font-size: 14px;
+}
+
+/* GLAVNI RASPORED */
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* LIJEVO | DESNO */
+  gap: 40px;
+  align-items: start;
+}
+
+/* LIJEVO – LOGO + IME */
+.footer-ime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  align-self: start;   /* poravnanje po vrhu reda */
+  margin-top: 4px;     /* fina korekcija */
+  margin-left: 3px;
+}
+
+
+.footer-kontakt {
+  align-self: start;   /* ISTA visina kao opis */
+}
+
+  .footer-ime,
+.footer-kontakt {
+  align-self: center;
+}
+
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+.footer-ime h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.footer-ime p {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* DESNO – KONTAKT */
+.footer-kontakt {
+  justify-self: end;
+  text-align: left;
+}
+
+.footer-kontakt h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer-kontakt p {
+  color: #cccccc;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.footer-kontakt a {
+    color: #cccccc;
+  text-decoration: none;
+}
+
+.footer-kontakt a:hover {
+  text-decoration: underline;
+}
+
+/* DONJI DIO */
+.footer-kraj { 
+  border-top: 1px solid #555;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.footer-kraj p {
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-kontakt {
+    margin-top: 30px;
+    justify-self: start;
+  }
+}
+
+
+
+/*--------------- mobitel ---------------*/
+
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-left: 20px;
+        padding-top: 20px;
+        min-height: 100svh;
+    }
+
+    .hero {
+       min-height: 60vh;
+       padding-left: 20px;
+       padding-top: 30px; 
+    }
+
+    
+
+    .hero-logo {
+        
+        width: 200px;
+        height: auto;
+        top: 100px;
+        left: 50px;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+/*--------------- navigacija ---------------*/
+
+
+  
+    .navbar {
+        position: static; transform: none; background: none; 
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        background: rgba(60, 56, 130, 0.697);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 900;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 1000;
+    }
+
+
+
+
+
+
+
+
+
+
+/*--------------- section ---------------*/
+
+
+.section {
+      max-width: 92%;
+      margin: 40px auto;
+      padding: 40px 20px;
+      border-radius: 2px;
+  }
+
+.o-meni-logo
+{
+    
+        display: none;
+
+}
+
+
+.container {
+    grid-template-columns: 1fr;
+  }
+
+
+.kontakt input, .kontakt textarea, .kontakt button {
+      width: 90%;
+      max-width: 500px;
+      margin: 5px auto;
+      display: block;
+  }
+
+
+  .kontakt textarea {
+      resize: none;
+  }
+
+  .container.text-center .row {
+      flex-direction: column;
+      align-items: left;
+  }
+
+  .col {
+      width: 100%;
+      margin-bottom: 30px;
+  }
+
+
+  .obrazovanje p, .jezik ul, .podaci p, .interesi ul, .vjestine ul {
+      font-size: 1rem;
+      text-align: left;
+  }
+
+  .obrazovanje h3, .jezik h3, .podaci h3, .interesi h3, .vjestine h3 {
+      font-size: 1.8rem;
+      text-align: left;
+  }
+
+  
+  .projekti h2, .projekti h3, .projekti p {
+      text-align: left;
+      font-size: 1rem;
+  }
+
+.ja p
+{
+ text-align: left;
+ font-size: 1.1rem;
+}
+
+  }

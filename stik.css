@@ -1,0 +1,185 @@
+body
+{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color:rgb(58, 145, 94, 0.651)
+}
+
+
+html
+{
+   scroll-behavior: smooth;
+}
+
+
+.navbar
+{
+text-align: center;
+}  
+
+
+.navbar a
+{
+color: rgb(0, 0, 0);
+text-decoration: none;
+}
+
+
+header
+{
+
+   background-color: rgba(3, 37, 17, 0.651);
+   padding-top: 20px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-bottom: 20px;
+   border: 2px solid radius ;
+   border-radius: 10px;
+}
+
+
+header p
+{
+color:black;
+text-align: center;
+font-size: 24px;
+}
+
+
+header h1
+{
+color: rgb(10, 36, 21);
+text-align: center;
+font-size: 60px;
+font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+
+.onama
+{
+background-color: rgba(7, 82, 30, 0.253);
+   padding-top: 60px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-bottom: 60px;
+   border: 2px solid radius ;
+   border-radius: 10px;
+   margin-top: 40px; 
+}
+
+
+.onama p
+{
+font-size: 22px;
+color:black;
+text-align: left;
+}
+
+
+.onama h2
+{
+color: rgba(3, 37, 17, 0.651);
+text-align: left;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 35px;
+}
+
+.nvbar 
+{
+text-align: left;
+display: flex;
+
+}
+
+.nvbar a
+{
+color: rgb(0, 0, 0);
+text-decoration: none;
+}
+
+
+
+.ponuda
+{
+background-color: rgba(7, 82, 30, 0.253);
+   padding-top: 60px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-bottom: 60px;
+   border: 2px solid radius ;
+   border-radius: 10px;
+   margin-top: 40px;
+}
+
+.ponuda h2
+{
+color: rgba(3, 37, 17, 0.651);
+text-align: left;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 35px;
+}
+
+.ponuda h3
+{
+color: rgba(3, 37, 17, 0.651);
+text-align: left;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 30px;
+}
+
+
+.ponuda p
+{
+font-size: 26px;
+color:black;
+text-align: left;
+}
+
+.card
+{
+width: 300px;
+height: auto;
+margin: 20px;
+border-radius: 20px;
+}
+
+.card img
+{
+width: 100%;
+height: auto;
+border-radius: 20px;
+margin-bottom: 10px;
+margin-left: 10px;
+}
+
+.cards
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 20px;
+}
+
+
+
+
+
+.kontakt
+{
+background-color: rgba(7, 82, 30, 0.253);
+   padding-top: 60px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-bottom: 60px;
+   border: 2px solid radius ;
+   border-radius: 10px;
+   margin-top: 40px;
+}
+
+
+.kontakt h2
+{
+color: rgba(3, 37, 17, 0.651);
+text-align: left;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 35px;
+}

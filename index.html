@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sumeja Hibović-CV</title>
+
+</head>
+
+
+
+
+<body> 
+
+
+
+  
+<header class="hero">   
+  <div class="hero-content">
+<img src="Sumeja Hibovic.svg" class="hero-logo" alt="logo">
+</div>
+ 
+ <div class="hamburger">
+   <span></span>
+   <span></span>
+   <span></span>
+ </div>
+
+ 
+<nav class="navbar">
+   <ul class="nav-links">
+     <a href="#o-meni">O meni</a>
+     <a href="#projekti">Projekti</a>
+     <a href="#kontakt">Kontakt</a>
+   </ul>
+ </nav>
+ 
+
+</header>
+
+
+<section id="o-meni" class="o-meni">
+
+  <div class="ja">
+      <h2>O MENI</h2>
+      <p>Ja sam motivisana srednjoškolka sa interesovanjem za web dizajn i programiranje.<br>
+         Volim raditi kreativne projekte i stalno učiti nove tehnologije.<br>
+         Cilj mi je steći praktično iskustvo kroz praksu ili prve projekte u oblasti web razvoja.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="obrazovanje card">
+      <h3>OBRAZOVANJE</h3>
+      <p>
+        Srednja mješovita škola "Zijah Dizdarević" Fojnica<br>
+        Smjer: Gimnazija informacionih tehnologija
+      </p>
+    </div>
+
+    <div class="jezik card">
+      <h3>JEZICI</h3>
+      <p>
+        Bosanski – maternji<br>
+        Engleski – srednji nivo<br>
+        Njemački – osnovni nivo<br>
+        Turski – osnovni nivo
+      </p>
+    </div>
+
+    <div class="vjestine card large-card">
+      <h3>VJEŠTINE</h3>
+      <h4>Tehničke vještine</h4>
+      <p>
+        HTML<br>
+        CSS<br>
+        Osnove C++<br>
+        Visual Studio Code
+      </p>
+      <h4>Lične vještine</h4>
+      <p>
+        Timski rad<br>
+        Dobra komunikacija<br>
+        Organizacija vremena<br>
+        Kreativnost
+      </p>
+    </div>
+
+    <div class="interesi card">
+      <h3>INTERESI</h3>
+      <p>
+        Web dizajn<br>
+        Programiranje<br>
+        Digitalna kreativnost<br>
+        Učenje novih tehnologija
+      </p>
+    </div>
+
+    <div class="podaci card">
+      <h3>KONTAKT PODACI</h3>
+      <p>
+        E-mail: sumihibovic@gmail.com<br>
+        Instagram: sumeja.hibovic<br>
+        Telefonski broj: 062 561 551<br>
+        Lokacija: Fojnica 71270
+      </p>
+    </div>
+
+  </div>
+
+
+  
+</section>
+
+
+<section id="projekti" class="projekti">
+<h2>PROJEKTI</h2><br><br>
+<p>Pogledajte moje projekte! Ovdje možete vidjeti što sam radila, kako učim i stvaram, te dobiti inspiraciju za vlastite ideje.</p>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Animacija</h5>
+        <p class="card-text">Ovdje možete pronaći moju prvu animaciju napravljenu koristeći osnove HTML i CSS tehnikke.</p>
+        <a href="animacije.html" class="btn btn-primary">Animacija</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Restoran</h5>
+        <p class="card-text">Ovo je moj prvi projekat, iako je jednostavan u njega je ulozeno mnogo truda.</p>
+        <a href="rest.html" class="btn btn-primary">Restoran</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="kontakt" class="kontakt">
+<h2> Imate ideju za web stranicu? <br>
+ Kontaktirajte me i pretvorimo je u stvarnost.</h2><br><br>
+
+<form action="posalji.php" method="post" autocomplete="on">
+
+    <label for="ime">Ime i prezime:</label><br>
+    <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime" required><br><br>
+
+    <label for="email">Unesite e-mail:</label><br>
+    <input type="email" id="email" name="email" placeholder="E-mail" required><br><br>
+
+    <label for="telefon">Broj telefona:</label><br>
+    <input type="tel" id="telefon" name="telefon" placeholder="Unesite broj telefona" required><br><br>
+
+    <label for="poruka">Poruka:</label><br>
+   <textarea id="poruka" name="poruka" placeholder="Unesite poruku..."></textarea><br><br>
+
+    <button type="submit">Pošalji</button>
+
+</form>
+
+</section>
+
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-ime">
+      <img src="Sumeja Hibovic.svg" alt="Sumeja Hibović logo" class="footer-logo">
+      <h3>Sumeja Hibović</h3>
+      <p>Web dizajn & frontend razvoj</p>
+    </div>
+
+    <div class="footer-kontakt">
+      <h4>KONTAKT</h4>
+      <p>Email: <a href="mailto:sumihibovic@gmail.com">sumihibovic@gmail.com</a></p>
+      <p>Fojnica, BiH</p>
+    </div>
+
+  </div>
+
+  <div class="footer-kraj">
+    <p>© 2025 Sumeja Hibović. Sva prava zadržana.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("open");
+});
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {  // provjera: mobitel / tablet
+            const navLinks = document.querySelector(".nav-links");
+            const hamburger = document.querySelector(".hamburger");
+
+            // zatvori mobile meni
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("open");
+        }
+    });
+});
+
+
+const textarea = document.getElementById("poruka");
+
+textarea.addEventListener("input", function () {
+    this.style.height = "auto";           // reset
+    this.style.height = this.scrollHeight + "px"; // nova visina
+});
+
+
+</script>
+
+
+
+
+
+
+
+</html>
